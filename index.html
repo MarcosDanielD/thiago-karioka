@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiago Karioka · Educador Físico e Nutricionista — Reeducação Alimentar</title>
+  <meta name="description" content="Tiago Karioka, Educador Físico e Nutricionista. Reeducação alimentar para emagrecer, ganhar massa muscular e cuidar melhor da sua saúde — sem dietas restritivas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Libre+Caslon+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body class="is-loading">
+
+  <!-- INTRO -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__panel loader__panel--green"></div>
+    <div class="loader__panel loader__panel--dark">
+      <div class="loader__center">
+        <div class="loader__mark">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" /></svg>
+          <span>TK</span>
+        </div>
+        <div class="loader__name"><span>Tiago</span> <span>Karioka</span></div>
+        <div class="loader__role">Educador Físico &amp; Nutricionista</div>
+      </div>
+      <div class="loader__foot">
+        <span>Reeducação alimentar</span>
+        <span class="loader__count" id="loader-count">0%</span>
+      </div>
+      <div class="loader__bar"><i id="loader-bar"></i></div>
+    </div>
+  </div>
+
+  <div class="progress" id="progress"></div>
+
+  <div class="banner">
+    <a href="#contato" id="banner-link">Agenda aberta — marque sua consulta de avaliação <span>→</span></a>
+  </div>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#" class="logo" id="logo"><span class="logo__mark">K</span>tiago karioka</a>
+      <nav class="nav__links" id="nav-links">
+        <a href="#programas" id="nav-programas">Programas</a>
+        <a href="#metodo" id="nav-metodo">Método</a>
+        <a href="#como-funciona" id="nav-como">Como funciona</a>
+        <a href="#sobre" id="nav-sobre">Sobre</a>
+        <a href="#contato" id="nav-contato">Contato</a>
+      </nav>
+      <a href="#contato" class="btn btn--ghost btn--sm nav__cta" id="nav-cta">Marcar consulta</a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <span class="pill reveal"><span class="dot"></span>Educador Físico &amp; Nutricionista</span>
+          <h1 class="h-display reveal" data-delay="1">Reeducação <span class="accent">alimentar</span>.</h1>
+          <p class="lead reveal" data-delay="2">Para emagrecer, ganhar massa e cuidar melhor da sua saúde — com mais energia, disposição e hábitos que transformam.</p>
+          <div class="hero__cta reveal" data-delay="3">
+            <a href="#contato" class="btn btn--dark" id="hero-cta-primary">Marque sua consulta <span class="arrow">→</span></a>
+            <a href="#programas" class="btn btn--ghost" id="hero-cta-secondary">Conheça os programas</a>
+          </div>
+          <div class="hero__meta reveal" data-delay="3">
+            <div><strong>Resultados</strong>Sustentáveis</div>
+            <div><strong>Saúde</strong>e bem-estar</div>
+            <div><strong>Foco</strong>no seu objetivo</div>
+          </div>
+        </div>
+
+        <div class="mockup reveal" data-delay="2">
+          <img class="portrait" src="assets/tiago-capa.jpg" onerror="this.onerror=null;this.src='assets/refeicao.jpg';this.classList.remove('portrait')" alt="Tiago Karioka, Educador Físico e Nutricionista, de jaleco branco" />
+          <span class="bubble bubble--green">Olá, sou o Tiago 👋</span>
+          <span class="bubble bubble--white"><i></i>Agenda aberta</span>
+          <div class="bubble bubble--question">
+            <small>Pergunta frequente</small>
+            “Dá para emagrecer sem fazer dieta restritiva?”
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRIP -->
+    <section class="strip">
+      <div class="container">
+        <p class="label label--muted" style="margin-bottom:20px">Nutrição e movimento, no mesmo plano</p>
+        <div class="strip__row reveal">
+          <div class="strip__track" id="strip-track">
+            <span>Alimentação</span>
+            <span>Treino</span>
+            <span>Hábitos</span>
+            <span>Disposição</span>
+            <span>Constância</span>
+            <span>Bem-estar</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section class="section" id="programas">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="label reveal">Programas</p>
+            <h2 class="h-section reveal" data-delay="1" style="margin-top:16px">Três caminhos, um <span class="accent">objetivo</span>: você.</h2>
+          </div>
+          <p class="body-muted reveal" data-delay="2">Com formação em Educação Física e Nutrição, o Tiago monta um plano em que alimentação e treino trabalham juntos para o seu objetivo.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card reveal">
+            <div class="card__top">
+              <div class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 2v7c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></div>
+              <span class="card__num">01</span>
+            </div>
+            <h3>Reeducação alimentar</h3>
+            <p>Mais energia, disposição e hábitos que transformam — sem abrir mão do prazer de comer.</p>
+            <span class="tag">Hábitos para a vida</span>
+          </article>
+          <article class="card reveal" data-delay="1">
+            <div class="card__top">
+              <div class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 8v4l2 1"/><circle cx="12" cy="12" r="4.5"/></svg></div>
+              <span class="card__num">02</span>
+            </div>
+            <h3>Emagrecimento</h3>
+            <p>Perda de peso com saúde, sem dietas restritivas e sem o efeito sanfona.</p>
+            <span class="tag">Sem restrição extrema</span>
+          </article>
+          <article class="card reveal" data-delay="2">
+            <div class="card__top">
+              <div class="card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6.5 6.5h11M6.5 17.5h11M4 9v6M20 9v6M2 11v2M22 11v2M6.5 6.5v11M17.5 6.5v11"/></svg></div>
+              <span class="card__num">03</span>
+            </div>
+            <h3>Ganho de massa muscular</h3>
+            <p>Mais força, definição e resultados consistentes, com nutrição alinhada ao treino.</p>
+            <span class="tag">Força e definição</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARE -->
+    <section class="section" id="metodo">
+      <div class="container">
+        <div class="section-head">
+          <p class="label reveal">O método</p>
+          <h2 class="h-section reveal" data-delay="1">Não é dieta. É <span class="accent">reeducação</span>.</h2>
+        </div>
+        <div class="compare reveal">
+          <div class="compare__col">
+            <p class="label label--muted">Dieta restritiva</p>
+            <h3>Rápida e frágil</h3>
+            <ul>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--color-slate-mid)"><path d="M6 6l12 12M18 6 6 18"/></svg>Cortes radicais de grupos alimentares</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--color-slate-mid)"><path d="M6 6l12 12M18 6 6 18"/></svg>Cardápio genérico, igual para todos</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--color-slate-mid)"><path d="M6 6l12 12M18 6 6 18"/></svg>Efeito sanfona quando a dieta termina</li>
+            </ul>
+          </div>
+          <div class="compare__vs"><span>×</span></div>
+          <div class="compare__col compare__col--dark">
+            <p class="label">Reeducação alimentar</p>
+            <h3>Gradual e duradoura</h3>
+            <ul>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>Comida de verdade, com equilíbrio</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>Plano personalizado à sua rotina e ao seu treino</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>Hábitos que permanecem depois do programa</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <section class="mist-band">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="label reveal">Compromissos</p>
+            <h2 class="h-section reveal" data-delay="1" style="margin-top:16px">Saúde que se <span class="accent">sustenta</span>.</h2>
+          </div>
+          <p class="body-muted reveal" data-delay="2">Três princípios orientam cada atendimento, da primeira consulta ao acompanhamento.</p>
+        </div>
+        <div class="proof-grid">
+          <article class="proof reveal">
+            <p class="label">Resultados</p>
+            <div class="proof__big">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              <strong>Sustentáveis</strong>
+            </div>
+            <p>Mudanças graduais que se mantêm no longo prazo.</p>
+          </article>
+          <article class="proof reveal" data-delay="1">
+            <p class="label">Saúde</p>
+            <div class="proof__big">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></svg>
+              <strong>Bem-estar</strong>
+            </div>
+            <p>Mais energia e disposição no dia a dia, não só na balança.</p>
+          </article>
+          <article class="proof reveal" data-delay="2">
+            <p class="label">Foco</p>
+            <div class="proof__big">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+              <strong>No seu objetivo</strong>
+            </div>
+            <p>Emagrecer, ganhar massa ou ter mais saúde: o plano é seu.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <div class="section-head">
+          <p class="label reveal">Como funciona</p>
+          <h2 class="h-section reveal" data-delay="1">Da avaliação ao <span class="accent">resultado</span>.</h2>
+        </div>
+        <div class="services">
+          <a href="#contato" class="service reveal" id="step-avaliacao">
+            <span class="card__num">01</span>
+            <div><h3>Avaliação inicial</h3><p>Histórico, rotina, preferências alimentares, treino e objetivo.</p></div>
+            <span class="service__go">→</span>
+          </a>
+          <a href="#contato" class="service reveal" data-delay="1" id="step-plano">
+            <span class="card__num">02</span>
+            <div><h3>Plano alimentar personalizado</h3><p>Cardápio flexível, prático e possível de seguir.</p></div>
+            <span class="service__go">→</span>
+          </a>
+          <a href="#contato" class="service reveal" id="step-treino">
+            <span class="card__num">03</span>
+            <div><h3>Orientação de treino</h3><p>Exercício e nutrição integrados para potencializar resultados.</p></div>
+            <span class="service__go">→</span>
+          </a>
+          <a href="#contato" class="service reveal" data-delay="1" id="step-acompanhamento">
+            <span class="card__num">04</span>
+            <div><h3>Acompanhamento</h3><p>Ajustes contínuos conforme sua evolução.</p></div>
+            <span class="service__go">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__img reveal"><img src="assets/refeicao.jpg" alt="Refeição equilibrada com frango, arroz integral, brócolis e abacate" /></div>
+        <div>
+          <p class="label reveal">Sobre</p>
+          <h2 class="h-section reveal" data-delay="1" style="margin-top:16px">Prato e treino, <span class="accent">juntos</span>.</h2>
+          <p class="body-muted reveal" data-delay="2" style="margin-top:20px">Tiago Karioka une duas formações: Educação Física e Nutrição. Assim, o que você come e como você treina fazem parte de um único plano, pensado para a sua realidade.</p>
+
+          <ol class="timeline reveal" data-delay="2">
+            <li><time>Educação Física</time><div><strong>Movimento com propósito</strong><span>Treino orientado para força, condicionamento e saúde.</span></div></li>
+            <li><time>Nutrição</time><div><strong>Alimentação estratégica</strong><span>Planos alimentares equilibrados e sem restrições extremas.</span></div></li>
+            <li><time>Método</time><div><strong>Abordagem integrada</strong><span>Um único plano, com foco no seu objetivo.</span></div></li>
+          </ol>
+
+          <figure class="quote-card reveal" data-delay="3">
+            <blockquote>“Resultado de verdade é aquele que você <span class="accent">consegue manter</span>.”</blockquote>
+            <footer>
+              <span class="avatar"><img src="assets/tiago-capa.jpg" onerror="this.remove()" alt="" />TK</span>
+              <div><strong>Tiago Karioka</strong><span>Educador Físico e Nutricionista</span></div>
+            </footer>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div>
+          <p class="label reveal">Marque sua consulta</p>
+          <h2 class="h-section reveal" data-delay="1" style="margin-top:16px">Seu próximo passo começa <span class="accent">aqui</span>.</h2>
+          <p class="body-muted reveal" data-delay="2" style="margin-top:20px">Conte um pouco sobre seu objetivo e retornarei para agendar sua avaliação.</p>
+          <ul class="contact__list reveal" data-delay="2">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>WhatsApp: (00) 00000-0000</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>@tiagokarioka</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>Atendimento presencial e online</li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" data-delay="1">
+          <div class="row">
+            <label>Nome<input type="text" id="input-nome" required placeholder="Seu nome" /></label>
+            <label>WhatsApp<input type="tel" id="input-telefone" required placeholder="(00) 00000-0000" /></label>
+          </div>
+          <label>Objetivo
+            <select id="input-objetivo">
+              <option>Reeducação alimentar</option>
+              <option>Emagrecimento</option>
+              <option>Ganho de massa muscular</option>
+              <option>Saúde e bem-estar</option>
+            </select>
+          </label>
+          <label>Mensagem<textarea id="input-mensagem" placeholder="Conte um pouco sobre sua rotina e seu objetivo..."></textarea></label>
+          <button type="submit" class="btn btn--dark" id="form-submit">Quero marcar minha consulta <span class="arrow">→</span></button>
+          <p class="form__ok">✓ Recebido! Entrarei em contato em breve.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+        <p class="label reveal">Comece hoje</p>
+        <h2 class="h-section reveal" data-delay="1">Mais saúde, sem <span class="accent">sofrimento</span>.</h2>
+        <div class="cta__btns reveal" data-delay="2">
+          <a href="#contato" class="btn btn--dark" id="cta-primary">Marque sua consulta <span class="arrow">→</span></a>
+          <a href="#programas" class="btn btn--ghost" id="cta-secondary">Ver programas</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Tiago Karioka · Educador Físico e Nutricionista</span>
+      <span>Resultados sustentáveis · Saúde e bem-estar · Foco no seu objetivo</span>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY CTA -->
+  <div class="mobile-cta" id="mobile-cta">
+    <a href="#contato" class="btn btn--dark" id="mobile-cta-btn">Marque sua consulta <span class="arrow">→</span></a>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
