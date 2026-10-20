@@ -34,8 +34,6 @@
 
   /* ---------- 2. Reveal variants ---------- */
   const variant = (sel, type) => document.querySelectorAll(sel).forEach((el) => el.setAttribute('data-reveal', type));
-  variant('.mockup', 'clip');
-  variant('.about__img', 'clip');
   variant('.compare', 'scale');
   variant('.contact .form', 'right');
   variant('.timeline', 'left');
@@ -79,20 +77,37 @@
     setTimeout(() => {
       body.classList.remove('is-loading');
       startReveals();
-    }, reduced ? 0 : 650);
-    setTimeout(() => document.getElementById('loader')?.remove(), 1800);
+    }, reduced ? 0 : 500);
+    setTimeout(() => document.getElementById('loader')?.remove(), 1600);
   }
   requestAnimationFrame(tick);
-  setTimeout(() => { pageReady = true; }, 5000); // safety net
+  setTimeout(() => { pageReady = true; }, 4000); // safety net
 
   /* ---------- 5. Scroll reveals ---------- */
   function startReveals() {
+    const reveals = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
-    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    }, { threshold: 0.05, rootMargin: '40px 0px 0px 0px' });
+
+    reveals.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('in');
+      } else {
+        io.observe(el);
+      }
+    });
+
+    // Failsafe: guarantee all elements are visible without delay
+    setTimeout(() => {
+      reveals.forEach((el) => el.classList.add('in'));
+    }, 1800);
   }
 
   /* ---------- 6. Scroll-linked: progress bar, nav, parallax, mobile CTA ---------- */
