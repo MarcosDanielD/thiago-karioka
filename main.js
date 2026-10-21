@@ -91,21 +91,19 @@
           io.unobserve(e.target);
         }
       });
-    }, { threshold: 0.05, rootMargin: '40px 0px 0px 0px' });
+    }, {
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
+    });
 
     reveals.forEach((el) => {
       const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
+      if (rect.top < window.innerHeight * 0.75 && rect.bottom > 0) {
         el.classList.add('in');
       } else {
         io.observe(el);
       }
     });
-
-    // Failsafe: guarantee all elements are visible without delay
-    setTimeout(() => {
-      reveals.forEach((el) => el.classList.add('in'));
-    }, 1800);
   }
 
   /* ---------- 6. Scroll-linked: progress bar, nav, parallax, mobile CTA ---------- */
@@ -118,18 +116,24 @@
   let ticking = false;
 
   function onScroll() {
-    const y = window.scrollY;
+    const y = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
     const vh = window.innerHeight;
-    const max = document.documentElement.scrollHeight - vh;
-    progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
-    nav.classList.toggle('scrolled', y > 8);
+    const docH = document.documentElement.scrollHeight;
+    const max = docH - vh;
+    
+    if (progress) {
+      progress.style.transform = `scaleX(${max > 0 ? Math.min(1, Math.max(0, y / max)) : 0})`;
+    }
+    if (nav) {
+      nav.classList.toggle('scrolled', y > 8);
+    }
 
     if (!reduced) {
       parallax.forEach((el) => {
         const r = el.getBoundingClientRect();
-        if (r.bottom < 0 || r.top > vh) return;
+        if (r.bottom < -60 || r.top > vh + 60) return;
         const center = r.top + r.height / 2 - vh / 2;
-        const shift = Math.max(-1, Math.min(1, center / vh)) * -(r.height * (el.classList.contains('mockup') ? 0.03 : 0.05));
+        const shift = Math.max(-1, Math.min(1, center / vh)) * -14;
         el.style.setProperty('--py', shift.toFixed(1) + 'px');
       });
     }
@@ -141,7 +145,11 @@
     }
     ticking = false;
   }
+
   window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+  }, { passive: true });
+  window.addEventListener('touchmove', () => {
     if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
   }, { passive: true });
   window.addEventListener('resize', onScroll);
