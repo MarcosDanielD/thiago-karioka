@@ -35,8 +35,6 @@
   /* ---------- 2. Reveal variants ---------- */
   const variant = (sel, type) => document.querySelectorAll(sel).forEach((el) => el.setAttribute('data-reveal', type));
   variant('.compare', 'scale');
-  variant('.contact .form', 'right');
-  variant('.timeline', 'left');
 
   // Stagger grid children automatically
   document.querySelectorAll('.grid-3, .proof-grid, .services').forEach((grid) => {
